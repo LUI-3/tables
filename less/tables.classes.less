@@ -1,0 +1,605 @@
+// LUI-3 FRAMEWORK
+// github.com/LUI-3
+// originally created by Jiří Bělský (github.com/wUFr)
+// ----
+// TABLES - CLASSNAMES
+
+
+.@{lui_class_prefix}_table {
+	.lui.table.list.this();
+
+	thead {
+		th,
+		td {
+			.lui.table.list.thead.cell();
+
+			&.check {
+				width: 55px;
+			}
+		}
+	}
+	
+	&.xs-list thead {
+		display: table-header-group;
+	}
+
+	&.xs-block thead {
+		display: none;
+	}
+	
+	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
+	@media (min-width:@grid_sm_start){
+		&.sm-list thead {
+			display: table-header-group;
+		}
+
+		&.sm-block thead {
+			display: none;
+		}
+	}
+
+	@media (min-width:@grid_md_start){
+		&.md-list thead {
+			display: table-header-group;
+		}
+
+		&.md-block thead {
+			display: none;
+		}
+	}
+
+	@media (min-width:@grid_lg_start){
+		&.lg-list thead {
+			display: table-header-group;
+		}
+
+		&.lg-block thead {
+			display: none;
+		}
+	}
+
+	@media (min-width:@grid_xl_start){
+		&.xl-list thead {
+			display: table-header-group;
+		}
+
+		&.xl-block thead {
+			display: none;
+		}
+	}
+
+	@media (min-width:@grid_xxl_start){
+		&.xxl-list thead {
+			display: table-header-group;
+		}
+
+		&.xxl-block thead {
+			display: none;
+		}
+	}
+
+	@media (min-width:@grid_xxxl_start){
+		&.xxxl-list thead {
+			display: table-header-group;
+		}
+
+		&.xxxl-block thead {
+			display: none;
+		}
+	}
+
+	tbody {
+		tr {
+			.lui.table.list.tbody.row();
+
+			&.ui-sortable-handle.ui-sortable-helper {
+				cursor: move;
+				background: white;
+				box-shadow: 0 0 15px rgba(0,0,0,0.1);
+			}
+
+			td,
+			th {
+				.lui.table.list.tbody.cell();
+
+				
+
+				.lui_check.simple {
+					padding-left: 6px;
+				}
+			}
+
+			&:nth-child(even) td,
+			&:nth-child(even) th {
+				.lui.table.list.tbody.cell-even();
+			}
+		}
+	}
+
+	// BORDER FOR LAST LINE
+	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
+
+	&.xs-list tbody tr:last-child td,
+	&.xs-list tbody tr:last-child th {
+		.lui.table.list.tbody.cell-last();
+	}
+
+	&.xs-block tbody tr td:last-child,
+	&.xs-block tbody tr th:last-child {
+		.lui.table.list.tbody.cell-last();
+	}
+
+	@media (min-width:@grid_sm_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.sm-list tbody tr:nth-child(odd) td,
+		&.sm-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.sm-list tbody tr:nth-child(even) td,
+		&.sm-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.sm-list tbody tr:last-child td,
+		&.sm-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.sm-block tbody tr td:last-child,
+		&.sm-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	@media (min-width:@grid_md_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.md-list tbody tr:nth-child(odd) td,
+		&.md-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.md-list tbody tr:nth-child(even) td,
+		&.md-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.md-list tbody tr:last-child td,
+		&.md-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.md-block tbody tr td:last-child,
+		&.md-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	@media (min-width:@grid_lg_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.lg-list tbody tr:nth-child(odd) td,
+		&.lg-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.lg-list tbody tr:nth-child(even) td,
+		&.lg-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.lg-list tbody tr:last-child td,
+		&.lg-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.lg-block tbody tr td:last-child,
+		&.lg-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	@media (min-width:@grid_xl_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.xl-list tbody tr:nth-child(odd) td,
+		&.xl-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.xl-list tbody tr:nth-child(even) td,
+		&.xl-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.xl-list tbody tr:last-child td,
+		&.xl-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.xl-block tbody tr td:last-child,
+		&.xl-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	@media (min-width:@grid_xxl_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.xxl-list tbody tr:nth-child(odd) td,
+		&.xxl-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.xxl-list tbody tr:nth-child(even) td,
+		&.xxl-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.xxl-list tbody tr:last-child td,
+		&.xxl-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.xxl-block tbody tr td:last-child,
+		&.xxl-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	@media (min-width:@grid_xxxl_start){
+		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
+		&.xxxl-list tbody tr:nth-child(odd) td,
+		&.xxxl-list tbody tr:nth-child(odd) th {
+			.lui.table.list.tbody.cell();
+		}
+
+		&.xxxl-list tbody tr:nth-child(even) td,
+		&.xxxl-list tbody tr:nth-child(even) th {
+			.lui.table.list.tbody.cell-even();
+		}
+
+		&.xxxl-list tbody tr:last-child td,
+		&.xxxl-list tbody tr:last-child th {
+			.lui.table.list.tbody.cell-last();
+		}
+
+		&.xxxl-block tbody tr td:last-child,
+		&.xxxl-block tbody tr th:last-child {
+			.lui.table.list.tbody.cell-last();
+		}
+	}
+
+	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
+
+	&.xs-list tbody {
+		display: table-row-group;
+
+		tr {
+			display: table-row;
+
+			th,
+			td {
+				display: table-cell;
+			}
+
+			th[data-title],
+			td[data-title]{
+				text-align: inherit;
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.xs-block tbody {
+		display: block;
+
+		tr {
+			display: block;
+
+			th,
+			td {
+				display: block;
+			}
+
+			th[data-title],
+			td[data-title]{
+				text-align: right;
+				.lui.clear.after();
+
+				&:before {
+					float: left;
+					content: attr(data-title);
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_sm_start){
+		&.sm-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: inherit;
+
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.sm-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_md_start){
+		&.md-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: inherit;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.md-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_lg_start){
+		&.lg-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: inherit;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.lg-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_xl_start){
+		&.xl-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: inherit;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.xl-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_xxl_start){
+		&.xxl-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: inherit;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.xxl-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+
+	@media (min-width:@grid_xxxl_start){
+		&.xxxl-list tbody {
+			display: table-row-group;
+
+			tr {
+				display: table-row;
+
+				th,
+				td {
+					display: table-cell;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.xxxl-block tbody {
+			display: block;
+
+			tr {
+				display: block;
+
+				th,
+				td {
+					display: block;
+				}
+
+				th[data-title],
+				td[data-title]{
+					text-align: right;
+					.lui.clear.after();
+
+					&:before {
+						font-weight: bold;
+						float: left;
+						content: attr(data-title);
+					}
+				}
+			}
+		}
+	}
+}

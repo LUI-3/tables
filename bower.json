@@ -1,0 +1,28 @@
+{
+  "name": "LUI-3_tables",
+  "homepage": "https://github.com/LUI-3/tables",
+  "authors": [
+    "wufiii@gmail.com"
+  ],
+  "description": "Responsive front-end website framework - tables component",
+  "main": "less/tables.router.less",
+  "keywords": [
+    "responsive",
+    "front-end",
+    "framework",
+    "website",
+    "web"
+  ],
+  "dependencies": {
+      "LUI-3_base": ">=3.0.0",
+      "tablesorter": ">=2.0.5"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

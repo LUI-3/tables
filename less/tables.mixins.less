@@ -1,0 +1,533 @@
+// LUI-3 FRAMEWORK
+// github.com/LUI-3
+// originally created by Jiří Bělský (github.com/wUFr)
+// ----
+// TABLES - MIXINS
+
+
+.lui.table.list {
+	.this(){
+		border-collapse: collapse;
+		width: 100%;
+		padding: 5px;
+		overflow: hidden;
+		border: 0;
+	}
+
+	// TABLE HEAD
+	.thead {
+		.cell(){
+			padding: 10px;
+			font-weight: bold;
+			border-bottom: 2px solid rgba(0,0,0,0.05);
+			text-align: left;
+
+			&.a-left {
+				text-align: left;
+			}
+
+			&.a-center {
+				text-align: center;
+			}
+
+			&.a-right {
+				text-align: right;
+			}
+
+			&.va-top {
+				vertical-align: top;
+			}
+
+			&.va-middle,
+			&.va-center {
+				vertical-align: middle;
+			}
+
+			&.va-foot {
+				vertical-align: baseline;
+			}
+
+			// XS BREAKPOINT STARTS AT 0px
+			&.a-xs-left {
+				.a-left();
+			}
+
+			&.a-xs-center {
+				.a-center();
+			}
+
+			&.a-xs-right {
+				.a-right();
+			}
+
+			&.va-xs-top {
+				.va-top();
+			}
+
+			&.va-xs-middle,
+			&.va-xs-center {
+				.va-center();
+			}
+
+			&.va-xs-foot {
+				.va-foot();
+			}
+			
+
+			@media (min-width:@grid_sm_start){
+				&.a-sm-left {
+					.a-left();
+				}
+
+				&.a-sm-center {
+					.a-center();
+				}
+
+				&.a-sm-right {
+					.a-right();
+				}
+
+				&.va-sm-top {
+					.va-top();
+				}
+
+				&.va-sm-middle,
+				&.va-sm-center {
+					.va-center();
+				}
+
+				&.va-sm-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_md_start){
+				&.a-md-left {
+					.a-left();
+				}
+
+				&.a-md-center {
+					.a-center();
+				}
+
+				&.a-md-right {
+					.a-right();
+				}
+
+				&.va-md-top {
+					.va-top();
+				}
+
+				&.va-md-middle,
+				&.va-md-center {
+					.va-center();
+				}
+
+				&.va-md-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_lg_start){
+				&.a-lg-left {
+					.a-left();
+				}
+
+				&.a-lg-center {
+					.a-center();
+				}
+
+				&.a-lg-right {
+					.a-right();
+				}
+
+				&.va-lg-top {
+					.va-top();
+				}
+
+				&.va-lg-middle,
+				&.va-lg-center {
+					.va-center();
+				}
+
+				&.va-lg-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xl_start){
+				&.a-xl-left {
+					.a-left();
+				}
+
+				&.a-xl-center {
+					.a-center();
+				}
+
+				&.a-xl-right {
+					.a-right();
+				}
+
+				&.va-xl-top {
+					.va-top();
+				}
+
+				&.va-xl-middle,
+				&.va-xl-center {
+					.va-center();
+				}
+
+				&.va-xl-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xxl_start){
+				&.a-xxl-left {
+					.a-left();
+				}
+
+				&.a-xxl-center {
+					.a-center();
+				}
+
+				&.a-xxl-right {
+					.a-right();
+				}
+
+				&.va-xxl-top {
+					.va-top();
+				}
+
+				&.va-xxl-middle,
+				&.va-xxl-center {
+					.va-center();
+				}
+
+				&.va-xxl-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xxxl_start){
+				&.a-xxxl-left {
+					.a-left();
+				}
+
+				&.a-xxxl-center {
+					.a-center();
+				}
+
+				&.a-xxxl-right {
+					.a-right();
+				}
+
+				&.va-xxxl-top {
+					.va-top();
+				}
+
+				&.va-xxxl-middle,
+				&.va-xxxl-center {
+					.va-center();
+				}
+
+				&.va-xxxl-foot {
+					.va-foot();
+				}
+			}
+
+			&.sortable,
+			&.sortable-js {
+				a {
+					position: relative;
+					padding-right: 35px;
+
+					&:hover {
+						text-decoration: none;
+						color: #1185df;
+					}
+
+					&:before,
+					&:after {
+						display: inline-block;
+						position: absolute;
+						width: 13px;
+						line-height: 10px;
+						height: 10px;
+						bottom: 4px;
+						text-align: center;
+						font-family: FontAwesome;
+						color: silver;
+						text-decoration: none;
+					}
+
+					&:before {
+						right: 0;
+						content: "\f0d7";
+					}
+
+					&:after {
+						right: 13px;
+						content: "\f0d8";
+					}
+				}
+
+				&.asc_active a:after {
+					color: inherit;
+				}
+
+				&.desc_active a:before {
+					color: inherit;
+				}
+			}
+
+			&.sortable-js {
+				cursor: pointer;
+
+				&:hover > a {
+					text-decoration: none;
+					color: #1185df;
+				}
+			}
+		}
+	}
+
+	// TABLE BODY (CONTENT)
+	.tbody {
+		.row(){
+			&.found {
+				opacity: 1;
+			}
+
+			&.not-found {
+				opacity: 0.4;
+			}
+		}
+
+		.cell(){
+			padding: 10px;
+			border-bottom: 1px solid rgba(0,0,0,0.03);
+
+			&.a-left {
+				text-align: left;
+			}
+
+			&.a-center {
+				text-align: center;
+			}
+
+			&.a-right {
+				text-align: right;
+			}
+
+			&.va-top {
+				vertical-align: top;
+			}
+
+			&.va-middle,
+			&.va-center {
+				vertical-align: middle;
+			}
+
+			&.va-foot {
+				vertical-align: baseline;
+			}
+
+			// XS BREAKPOINT STATS AT 0px
+			&.a-xs-left {
+				.a-left();
+			}
+
+			&.a-xs-center {
+				.a-center();
+			}
+
+			&.a-xs-right {
+				.a-right();
+			}
+
+			&.va-xs-top {
+				.va-top();
+			}
+
+			&.va-xs-middle,
+			&.va-xs-center {
+				.va-center();
+			}
+
+			&.va-xs-foot {
+				.va-foot();
+			}
+			
+			@media (min-width:@grid_sm_start){
+				&.a-sm-left {
+					.a-left();
+				}
+
+				&.a-sm-center {
+					.a-center();
+				}
+
+				&.a-sm-right {
+					.a-right();
+				}
+
+				&.va-sm-top {
+					.va-top();
+				}
+
+				&.va-sm-middle,
+				&.va-sm-center {
+					.va-center();
+				}
+
+				&.va-sm-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_md_start){
+				&.a-md-left {
+					.a-left();
+				}
+
+				&.a-md-center {
+					.a-center();
+				}
+
+				&.a-md-right {
+					.a-right();
+				}
+
+				&.va-md-top {
+					.va-top();
+				}
+
+				&.va-md-middle,
+				&.va-md-center {
+					.va-center();
+				}
+
+				&.va-md-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_lg_start){
+				&.a-lg-left {
+					.a-left();
+				}
+
+				&.a-lg-center {
+					.a-center();
+				}
+
+				&.a-lg-right {
+					.a-right();
+				}
+
+				&.va-lg-top {
+					.va-top();
+				}
+
+				&.va-lg-middle,
+				&.va-lg-center {
+					.va-center();
+				}
+
+				&.va-lg-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xl_start){
+				&.a-xl-left {
+					.a-left();
+				}
+
+				&.a-xl-center {
+					.a-center();
+				}
+
+				&.a-xl-right {
+					.a-right();
+				}
+
+				&.va-xl-top {
+					.va-top();
+				}
+
+				&.va-xl-middle,
+				&.va-xl-center {
+					.va-center();
+				}
+
+				&.va-xl-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xxl_start){
+				&.a-xxl-left {
+					.a-left();
+				}
+
+				&.a-xxl-center {
+					.a-center();
+				}
+
+				&.a-xxl-right {
+					.a-right();
+				}
+
+				&.va-xxl-top {
+					.va-top();
+				}
+
+				&.va-xxl-middle,
+				&.va-xxl-center {
+					.va-center();
+				}
+
+				&.va-xxl-foot {
+					.va-foot();
+				}
+			}
+
+			@media (min-width:@grid_xxxl_start){
+				&.a-xxxl-left {
+					.a-left();
+				}
+
+				&.a-xxxl-center {
+					.a-center();
+				}
+
+				&.a-xxxl-right {
+					.a-right();
+				}
+
+				&.va-xxxl-top {
+					.va-top();
+				}
+
+				&.va-xxxl-middle,
+				&.va-xxxl-center {
+					.va-center();
+				}
+
+				&.va-xxxl-foot {
+					.va-foot();
+				}
+			}
+		}
+
+		.cell-even(){
+			border-bottom: 1px solid rgba(0,0,0,0.05);
+		}
+
+		.cell-last(){
+			border-bottom-width: 5px;
+		}
+	}
+}

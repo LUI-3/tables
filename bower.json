@@ -15,7 +15,8 @@
   ],
   "dependencies": {
       "LUI-3_base": ">=3.0.0",
-      "tablesorter": ">=2.0.5"
+      "tablesorter": ">=2.0.5",
+      "jqueryui-touch-punch": "*"
   },
   "license": "MIT",
   "ignore": [

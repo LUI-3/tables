@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
     // JQUERY UI SELECT
     $("table.sortable-js").each(function () {
@@ -14,9 +13,11 @@ $(document).ready(function() {
 					var row = $(this).index() + 1; // first is 0, could work as well tho
 					$(this).find("input.js-order").val(row);
 				});
+			},
+			change: function(){
+				$(this).closest("table").addClass("js-order-changed");
 			}
 		});
 		$(this).disableSelection();
-		
 	});
 });

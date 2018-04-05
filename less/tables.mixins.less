@@ -22,6 +22,25 @@
 			border-bottom: 2px solid rgba(0,0,0,0.05);
 			text-align: left;
 
+			// CREDIT: https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			word-break: break-all;
+			word-break: break-word;
+
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+
+			&.nowrap {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
 			&.a-left {
 				text-align: left;
 			}
@@ -308,6 +327,25 @@
 		.cell(){
 			padding: 10px;
 			border-bottom: 1px solid rgba(0,0,0,0.03);
+
+			// CREDIT: https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+
+			-ms-word-break: break-all;
+			word-break: break-all;
+			word-break: break-word;
+
+			-ms-hyphens: auto;
+			-moz-hyphens: auto;
+			-webkit-hyphens: auto;
+			hyphens: auto;
+
+			&.nowrap {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
 
 			&.a-left {
 				text-align: left;

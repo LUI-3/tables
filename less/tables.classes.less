@@ -19,7 +19,8 @@
 		}
 	}
 
-	&.xs-list thead {
+	&.xs-list thead,
+	&.xl-table thead {
 		display: table-header-group;
 	}
 
@@ -29,8 +30,9 @@
 
 	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
 	@media (min-width:@grid_sm_start){
-		&.sm-list thead {
-			display: table-header-group;
+		&.sm-list thead,
+		&.sm-table thead {
+			display: table-row-group;
 		}
 
 		&.sm-block thead {
@@ -39,7 +41,8 @@
 	}
 
 	@media (min-width:@grid_md_start){
-		&.md-list thead {
+		&.md-list thead,
+		&.md-table thead {
 			display: table-header-group;
 		}
 
@@ -49,7 +52,8 @@
 	}
 
 	@media (min-width:@grid_lg_start){
-		&.lg-list thead {
+		&.lg-list thead,
+		&.lg-table thead {
 			display: table-header-group;
 		}
 
@@ -59,7 +63,8 @@
 	}
 
 	@media (min-width:@grid_xl_start){
-		&.xl-list thead {
+		&.xl-list thead,
+		&.xl-table thead {
 			display: table-header-group;
 		}
 
@@ -69,7 +74,8 @@
 	}
 
 	@media (min-width:@grid_xxl_start){
-		&.xxl-list thead {
+		&.xxl-list thead,
+		&.xxl-table thead {
 			display: table-header-group;
 		}
 
@@ -79,7 +85,8 @@
 	}
 
 	@media (min-width:@grid_xxxl_start){
-		&.xxxl-list thead {
+		&.xxxl-list thead,
+		&.xxxl-table thead {
 			display: table-header-group;
 		}
 
@@ -117,7 +124,9 @@
 	// BORDER FOR LAST LINE
 	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
 	&.xs-list tbody tr:last-child td,
-	&.xs-list tbody tr:last-child th {
+	&.xs-list tbody tr:last-child th,
+	&.xs-table tbody tr:last-child td,
+	&.xs-table tbody tr:last-child th {
 		.lui.table.list.tbody.cell-last();
 	}
 
@@ -129,17 +138,23 @@
 	@media (min-width:@grid_sm_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.sm-list tbody tr:nth-child(odd) td,
-		&.sm-list tbody tr:nth-child(odd) th {
+		&.sm-list tbody tr:nth-child(odd) th,
+		&.sm-table tbody tr:nth-child(odd) td,
+		&.sm-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.sm-list tbody tr:nth-child(even) td,
-		&.sm-list tbody tr:nth-child(even) th {
+		&.sm-list tbody tr:nth-child(even) th,
+		&.sm-table tbody tr:nth-child(even) td,
+		&.sm-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.sm-list tbody tr:last-child td,
-		&.sm-list tbody tr:last-child th {
+		&.sm-list tbody tr:last-child th,
+		&.sm-table tbody tr:last-child td,
+		&.sm-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -152,17 +167,23 @@
 	@media (min-width:@grid_md_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.md-list tbody tr:nth-child(odd) td,
-		&.md-list tbody tr:nth-child(odd) th {
+		&.md-list tbody tr:nth-child(odd) th,
+		&.md-table tbody tr:nth-child(odd) td,
+		&.md-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.md-list tbody tr:nth-child(even) td,
-		&.md-list tbody tr:nth-child(even) th {
+		&.md-list tbody tr:nth-child(even) th,
+		&.md-table tbody tr:nth-child(even) td,
+		&.md-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.md-list tbody tr:last-child td,
-		&.md-list tbody tr:last-child th {
+		&.md-list tbody tr:last-child th,
+		&.md-table tbody tr:last-child td,
+		&.md-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -175,17 +196,23 @@
 	@media (min-width:@grid_lg_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.lg-list tbody tr:nth-child(odd) td,
-		&.lg-list tbody tr:nth-child(odd) th {
+		&.lg-list tbody tr:nth-child(odd) th,
+		&.lg-table tbody tr:nth-child(odd) td,
+		&.lg-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.lg-list tbody tr:nth-child(even) td,
-		&.lg-list tbody tr:nth-child(even) th {
+		&.lg-list tbody tr:nth-child(even) th,
+		&.lg-table tbody tr:nth-child(even) td,
+		&.lg-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.lg-list tbody tr:last-child td,
-		&.lg-list tbody tr:last-child th {
+		&.lg-list tbody tr:last-child th,
+		&.lg-table tbody tr:last-child td,
+		&.lg-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -198,17 +225,23 @@
 	@media (min-width:@grid_xl_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.xl-list tbody tr:nth-child(odd) td,
-		&.xl-list tbody tr:nth-child(odd) th {
+		&.xl-list tbody tr:nth-child(odd) th,
+		&.xl-table tbody tr:nth-child(odd) td,
+		&.xl-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.xl-list tbody tr:nth-child(even) td,
-		&.xl-list tbody tr:nth-child(even) th {
+		&.xl-list tbody tr:nth-child(even) th,
+		&.xl-table tbody tr:nth-child(even) td,
+		&.xl-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.xl-list tbody tr:last-child td,
-		&.xl-list tbody tr:last-child th {
+		&.xl-list tbody tr:last-child th,
+		&.xl-table tbody tr:last-child td,
+		&.xl-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -221,17 +254,23 @@
 	@media (min-width:@grid_xxl_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.xxl-list tbody tr:nth-child(odd) td,
-		&.xxl-list tbody tr:nth-child(odd) th {
+		&.xxl-list tbody tr:nth-child(odd) th,
+		&.xxl-table tbody tr:nth-child(odd) td,
+		&.xxl-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.xxl-list tbody tr:nth-child(even) td,
-		&.xxl-list tbody tr:nth-child(even) th {
+		&.xxl-list tbody tr:nth-child(even) th,
+		&.xxl-table tbody tr:nth-child(even) td,
+		&.xxl-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.xxl-list tbody tr:last-child td,
-		&.xxl-list tbody tr:last-child th {
+		&.xxl-list tbody tr:last-child th,
+		&.xxl-table tbody tr:last-child td,
+		&.xxl-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -244,17 +283,23 @@
 	@media (min-width:@grid_xxxl_start){
 		// RESET BORDER IF PREVIOUS IS BLOCK IN PREVIOUS
 		&.xxxl-list tbody tr:nth-child(odd) td,
-		&.xxxl-list tbody tr:nth-child(odd) th {
+		&.xxxl-list tbody tr:nth-child(odd) th,
+		&.xxxl-table tbody tr:nth-child(odd) td,
+		&.xxxl-table tbody tr:nth-child(odd) th {
 			.lui.table.list.tbody.cell();
 		}
 
 		&.xxxl-list tbody tr:nth-child(even) td,
-		&.xxxl-list tbody tr:nth-child(even) th {
+		&.xxxl-list tbody tr:nth-child(even) th,
+		&.xxxl-table tbody tr:nth-child(even) td,
+		&.xxxl-table tbody tr:nth-child(even) th {
 			.lui.table.list.tbody.cell-even();
 		}
 
 		&.xxxl-list tbody tr:last-child td,
-		&.xxxl-list tbody tr:last-child th {
+		&.xxxl-list tbody tr:last-child th,
+		&.xxxl-table tbody tr:last-child td,
+		&.xxxl-table tbody tr:last-child th {
 			.lui.table.list.tbody.cell-last();
 		}
 
@@ -266,7 +311,8 @@
 
 	// TODO: CONDITIONS TO CHECK IF BREAKPOINT IS USED
 
-	&.xs-list tbody {
+	&.xs-list tbody,
+	&.xs-table tbody {
 		display: table-row-group;
 
 		tr {
@@ -312,7 +358,8 @@
 	}
 
 	@media (min-width:@grid_sm_start){
-		&.sm-list tbody {
+		&.sm-list tbody,
+		&.sm-table tbody {
 			display: table-row-group;
 
 			tr {
@@ -361,7 +408,8 @@
 	}
 
 	@media (min-width:@grid_md_start){
-		&.md-list tbody {
+		&.md-list tbody,
+		&.md-table tbody {
 			display: table-row-group;
 
 			tr {
@@ -409,7 +457,8 @@
 	}
 
 	@media (min-width:@grid_lg_start){
-		&.lg-list tbody {
+		&.lg-list tbody,
+		&.lg-table tbody {
 			display: table-row-group;
 
 			tr {
@@ -457,7 +506,8 @@
 	}
 
 	@media (min-width:@grid_xl_start){
-		&.xl-list tbody {
+		&.xl-list tbody,
+		&.xl-table tbody {
 			display: table-row-group;
 
 			tr {
@@ -505,7 +555,8 @@
 	}
 
 	@media (min-width:@grid_xxl_start){
-		&.xxl-list tbody {
+		&.xxl-list tbody,
+		&.xxl-table tbody {
 			display: table-row-group;
 
 			tr {
@@ -553,7 +604,8 @@
 	}
 
 	@media (min-width:@grid_xxxl_start){
-		&.xxxl-list tbody {
+		&.xxxl-list tbody,
+		&.xxxl-table tbody {
 			display: table-row-group;
 
 			tr {

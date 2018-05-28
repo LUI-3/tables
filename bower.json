@@ -14,8 +14,8 @@
     "web"
   ],
   "dependencies": {
-      "LUI-3_base": "~3.1.0",
-      "LUI-3_tablesorter": "~3.1.0",
+      "LUI-3_base": "~3.2.0",
+      "LUI-3_tablesorter": "~3.2.0",
       "jqueryui-touch-punch": "*"
   },
   "license": "MIT",
